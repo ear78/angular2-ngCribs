@@ -37,7 +37,7 @@
           <option
             *ngFor="let type of propertyTypes"
             [value]="type">
-              {{ propertyTypes }}
+              {{ utilService.capitalize(type) }}
           </option>
         </select>
       </div>
