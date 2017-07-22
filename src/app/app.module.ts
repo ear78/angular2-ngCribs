@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { CribListingComponent } from './components/crib-listing/crib-listing.component';
 import { CribCardComponent } from './components/crib-card/crib-card.component';
 
+import { CribsService } from './services/cribs.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,9 +16,11 @@ import { CribCardComponent } from './components/crib-card/crib-card.component';
     CribCardComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [CribsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
